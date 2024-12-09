@@ -15,6 +15,7 @@
     onsubmit="beforeSubmit()"
     >
     
+    <input type=hidden name='captcha_settings' value='{"keyname":"WebToLeadForm","fallback":"true","orgId":"00D5j00000B8uzM","ts":""}'>
     <input type=hidden name="oid" value="00D5j00000B8uzM">
     <input type=hidden name="retURL" value="https://prashanthgatadi.github.io/local/Thanks.html">
     <input type=hidden name="Lead_Date__c" class="outputdate">   
