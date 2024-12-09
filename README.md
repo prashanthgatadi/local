@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web-to-Lead Form</title>
-    <link rel="stylesheet" href="WebToLead.html">
+    <link rel="stylesheet" href="WebToLead.css">
     <script src="WebToLead.js"></script>
 </head>
 <body>    
