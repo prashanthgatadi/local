@@ -1,9 +1,9 @@
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web-to-Lead Form</title>
-    <link rel="stylesheet" href="WebToLead.css">
+    <link rel="stylesheet" href="WebToLead.html">
     <script src="WebToLead.js"></script>
 </head>
 <body>    
@@ -15,7 +15,7 @@
     >
     
     <input type=hidden name="oid" value="00D5j00000B8uzM">
-    <input type=hidden name="retURL" value="http://google.com">
+    <input type=hidden name="retURL" value="https://prashanthgatadi.github.io/local/Thanks.html">
     <input type=hidden name="Lead_Date__c" class="outputdate">   
    
     
