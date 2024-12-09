@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web-to-Lead Form</title>
     <link rel="stylesheet" href="WebToLead.css">
+    <script src="https://www.google.com/recaptcha/api.js"></script>
     <script src="WebToLead.js"></script>
 </head>
 <body>    
@@ -29,7 +30,7 @@
      -->
     <label for="email">Lead Date</label><input id="leadDate" type="date" required="true" class="inputdate"/><br>
     <input type="submit" name="submit" class="submit" />
-    
+    <div class="g-recaptcha" data-sitekey="6LcQbpYqAAAAANwsZTYn6dmpbe64L8STkMV9dncg"></div><br>
     </form>
 </body>
 </html>
