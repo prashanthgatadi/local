@@ -31,7 +31,7 @@
      -->
     <label for="email">Lead Date</label><input id="leadDate" type="date" required="true" class="inputdate"/><br>
     <input type="submit" name="submit" class="submit" />
-    <div class="g-recaptcha" data-sitekey="6LcQbpYqAAAAANwsZTYn6dmpbe64L8STkMV9dncg"></div><br>
+    <div class="g-recaptcha" data-callback= "captchsuccess" data-sitekey="6LcQbpYqAAAAANwsZTYn6dmpbe64L8STkMV9dncg"></div><br>
     </form>
 </body>
 </html>
