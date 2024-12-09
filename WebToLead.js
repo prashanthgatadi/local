@@ -1,30 +1,33 @@
 (function () {
     let captchachecked = false;
 
-    // Function to handle form submission
     function beforeSubmit(event) {
-        if (captchachecked) {
-            let inputdate = document.querySelector(".inputdate");
-            let outputdate = document.querySelector(".outputdate");
+        // Check if reCAPTCHA was verified
+        if (!captchachecked) {
+            alert("Please check the reCAPTCHA box to submit the lead.");
+            event.preventDefault();
+            return;
+        }
 
-            if (inputdate && outputdate) {
-                let parsedDate = new Date(inputdate.value);
-                if (!isNaN(parsedDate)) {
-                    outputdate.value = parsedDate.toLocaleDateString("en-US");
-                } else {
-                    alert("Please enter a valid date.");
-                    event.preventDefault();
-                }
+        // Format date field
+        let inputdate = document.querySelector(".inputdate");
+        let outputdate = document.querySelector(".outputdate");
+
+        if (inputdate && outputdate) {
+            let parsedDate = new Date(inputdate.value);
+            if (!isNaN(parsedDate)) {
+                outputdate.value = parsedDate.toLocaleDateString("en-US");
             } else {
-                console.error("Date input or output fields are missing.");
+                alert("Please enter a valid date.");
+                event.preventDefault();
             }
         } else {
-            alert("Please check the reCAPTCHA box to submit the lead.");
+            console.error("Date input or output field is missing.");
             event.preventDefault();
         }
     }
 
-    // Function to refresh reCAPTCHA timestamp
+    // Update reCAPTCHA timestamp periodically
     function timestamp() {
         let response = document.getElementById("g-recaptcha-response");
         if (!response || response.value.trim() === "") {
@@ -42,12 +45,10 @@
         captchachecked = true;
     }
 
-    // Attach the form submission handler
+    // Attach handlers
     document.querySelector("form").addEventListener("submit", beforeSubmit);
+    setInterval(timestamp, 2000);
 
-    // Update the reCAPTCHA timestamp periodically
-    setInterval(timestamp, 2000); // Increased interval to 2 seconds
-
-    // Expose captcha callback globally
+    // Expose captcha success callback globally
     window.captchsuccess = captchsuccess;
 })();
