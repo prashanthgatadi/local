@@ -11,6 +11,7 @@ function beforeSubmit(event){
     }else {
         alert("Please check the recaptcha box to submit the lead");
         event.preventDefault();
+    }
 }
  function timestamp() { 
      var response = document.getElementById("g-recaptcha-response"); 
